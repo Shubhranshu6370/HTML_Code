@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        h2 {
+            color: white;
+            margin: auto;
+            background-color: rgb(13, 83, 223);
+        }
+        
+        .line {
+            text-align: center;
+        }
+        
+        .image-container {
+            margin: auto;
+            border-radius: 20px;
+        }
+        
+        .image-box {
+            margin: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            flex: 2;
+            text-align: center;
+        }
+        
+        .music {
+            background-color: rgb(82, 82, 215);
+            padding: 20px;
+            margin: auto;
+            color: white;
+        }
+        
+        .image-box img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        
+        footer {
+            padding: 10px;
+            color: white;
+            background-color: rgb(82, 82, 215);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="music">Album Selection</h1>
+    <p class="music">Choose Your Musical Journey</p>
+
+
+    <h2>Indian Music</h2>
+
+    <div class="image-container">
+        <div class="image-box">
+            <img src="https://media.istockphoto.com/id/1284018973/vector/indian-traditional-music-2d-vector-web-banner-poster.jpg?s=612x612&w=0&k=20&c=gViaJdRIb6cjc-NVG2JsAM55qVw4zvgbcm7LV50kxZM=" alt="Image 1">
+            <p>Album Title: Indian Melodies</p>
+        </div>
+        <div class="image-box">
+            <img src="https://cdn.dollsofindia.com/images/p/thumbnails/terracotta-statues/musical-instruments-CC62.jpg" alt="Image 2">
+            <p>Album Title: Raga Reflections</p>
+        </div>
+
+        <div class="line">
+            <h2>Western Music</h2>
+        </div>
+
+
+        <div class="image-container">
+            <div class="image-box">
+                <img src="data:image/jpeg;base64,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"
+                    alt="Image 3">
+                <p>Album Title: Symphony Serenade</p>
+            </div>
+            <div class="image-box">
+                <img src="https://thumbs.dreamstime.com/b/music-poster-colored-musical-instruments-jazz-style-modern-music-poster-colored-musical-instruments-jazz-style-modern-generative-294124887.jpg" alt="Image 4">
+                <p>Album Title: Jazz Jamboree</p>
+            </div>
+        </div>
+        <footer>
+            &copy; Maharaja Music Company. All rights reserved.
+        </footer>
+
+</body>
+
+</html>

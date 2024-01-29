@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Items and Prices</title>
+    <style>
+        body {
+            background-color: rgb(231, 227, 227);
+            padding: 10px;
+            margin: 0;
+            border-radius: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+            background-color: black;
+            color: white;
+        }
+        
+        form {
+            border: 1px solid #749090;
+            padding: 50px;
+            text-align: justify;
+            border-radius: 30px;
+            margin-top: 30px;
+        }
+        
+        section {
+            margin: 10px;
+            background-color: white;
+            margin: 10px auto;
+            border: 10px;
+            border-radius: 40px;
+        }
+        
+        label {
+            font-weight: bold;
+            display: block;
+            border-radius: 20px;
+            border: 20px;
+            padding: 5px;
+            box-shadow: 5px solid #9eb1b1;
+        }
+        
+        input[type="number"] {
+            width: 300px;
+            padding: 10px;
+            margin: 5px 0 15px;
+        }
+        
+        button {
+            background-color: rgb(75, 75, 211);
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        
+        h2 {
+            padding: 20px;
+            text-align: center;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Sample Online Items and Prices</h1>
+    </header>
+    <section>
+        <form action="/submit" method="post">
+            <label for="laptop">Laptop ($800 each):</label>
+            <input type="number" placeholder="0" id="laptop" oninput="updateTotal()">
+            <br>
+            <label for="smartphone">Smartphone ($400 each)</label>
+            <input type="number" placeholder="0" id="smartphone" oninput="updateTotal()">
+            <br>
+            <label for="headphones">Headphones ($50 each)</label>
+            <input type="number" placeholder="0" id="headphones" oninput="updateTotal()">
+            <br>
+            <label for="tablet">Tablet ($300 each)</label>
+            <input type="number" placeholder="0" id="tablet" oninput="updateTotal()">
+            <br>
+            <button type="button" onclick="calculateTotal()">Calculate Total Price</button>
+        </form>
+    </section>
+    <h2 id="totalPrice"><b>Total Price: $0</b></h2>
+
+    <script>
+        var total = 0;
+
+        function updateTotal() {
+            var laptopQty = document.getElementById('laptop').value || 0;
+            var smartphoneQty = document.getElementById('smartphone').value || 0;
+            var headphonesQty = document.getElementById('headphones').value || 0;
+            var tabletQty = document.getElementById('tablet').value || 0;
+
+            var laptopPrice = 800;
+            var smartphonePrice = 400;
+            var headphonesPrice = 50;
+            var tabletPrice = 300;
+
+            total = (laptopQty * laptopPrice) + (smartphoneQty * smartphonePrice) + (headphonesQty * headphonesPrice) + (tabletQty * tabletPrice);
+
+            document.getElementById('totalPrice').textContent = 'Total Price: $' + total;
+        }
+
+        function calculateTotal() {
+            alert('Total Price: $' + total);
+        }
+    </script>
+</body>
+
+</html>
