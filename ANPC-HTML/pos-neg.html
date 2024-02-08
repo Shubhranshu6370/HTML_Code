@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positive or negative checker</title>
+    <style>
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            color: chocolate
+        }
+    </style>
+    <script>
+        function checknum() {
+            var userInput = prompt("Enter a number");
+
+            var number = parseInt(userInput);
+
+            if (number > 0) {
+                alert(number + " is a positive number");
+            } else if (number < 0) {
+                alert(number + " is a negative number");
+            } else {
+                alert("The number is zero");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <button onclick="checknum()">CheckNumber</button>
+</body>
+
+</html>
