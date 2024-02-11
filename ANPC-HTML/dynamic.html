@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic HTML</title>
+    <style>
+        .container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <h2>Welcome to Dynamic HTML!</h2>
+        <p>Click the button below to add a new paragraph.</p>
+        <button onclick="addParagraph()">Add Paragraph</button>
+    </div>
+
+    <script>
+        function addParagraph() {
+            // Create a new paragraph element
+            var paragraph = document.createElement("p");
+            // Set the text content of the paragraph
+            paragraph.textContent = "This is a dynamically created paragraph!";
+            // Append the paragraph to the container div
+            document.getElementById("container").appendChild(paragraph);
+        }
+    </script>
+
+</body>
+
+</html>
