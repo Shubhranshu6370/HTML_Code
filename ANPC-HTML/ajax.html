@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display JSON Data</title>
+</head>
+
+<body>
+
+    <div id="data-container"></div>
+
+    <script>
+        // Function to make AJAX request
+        function fetchData() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Parse JSON response
+                    var jsonData = JSON.parse(this.responseText);
+                    // Call function to display data
+                    displayData(jsonData);
+                }
+            };
+            xhttp.open("GET", "your_server_endpoint_here", true); // Replace "your_server_endpoint_here" with the actual URL of your server
+            xhttp.send();
+        }
+
+        // Function to display JSON data on webpage
+        function displayData(data) {
+            var container = document.getElementById("data-container");
+            // Clear previous data
+            container.innerHTML = "";
+            // Iterate through JSON data and display it
+            for (var i = 0; i < data.length; i++) {
+                var item = data[i];
+                var listItem = document.createElement("p");
+                listItem.textContent = "Name: " + item.name + ", Age: " + item.age;
+                container.appendChild(listItem);
+            }
+        }
+
+        // Call the fetchData function when the page loads
+        window.onload = fetchData;
+    </script>
+
+</body>
+
+</html>
