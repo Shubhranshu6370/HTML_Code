@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+        
+        section {
+            padding: 30px;
+            text-align: center;
+            margin: 30px auto;
+            border-radius: 10px;
+            height: 730px;
+            width: 600px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        form {
+            padding: 1cqi;
+            width: 450px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+        
+        label {
+            font-weight: bold;
+            display: block;
+            text-align: justify;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 450px;
+            padding: 8px;
+            margin: 2px 0 16px;
+        }
+        
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin: 4px;
+        }
+        
+        .container {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            color: white;
+        }
+        
+        .signup-button {
+            background-color: blue;
+            color: white;
+            width: 200px;
+            height: 40px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" id="header"></div>
+    <div class="container-content" id="main-content">
+        <section>
+            <h1>Survey Form</h1>
+            <form action="/submit">
+                <input type="text" name="name" placeholder="Enter your name">
+                <br>
+
+                <input type="email" name="email" placeholder="Enter your email">
+                <br>
+
+                <input type="number" name="age" placeholder="Enter your age">
+                <br>
+
+                <select name="user" id="user">
+                <option value="st">Student</option>
+                <option value="fr">Friend</option>
+                <option value="cu">Cusion</option>
+                <option value="br">Brother</option>
+            </select>
+                <br>
+                <label>Would you recommend this survey form to a friend?</label>
+                <br>
+                <input type="radio" name="option1" value="yes">Yes
+                <br>
+
+                <input type="radio" name="option2" value="no">No
+
+                <br>
+                <input type="radio" name="option3" value="maybe">May be
+
+                <br>
+
+                <label>Language and Frameworks known (Check all that apply)</label>
+                <br>
+                <input type="checkbox" name="skill" value="java">Java
+                <br>
+                <input type="checkbox" name="skill" value="python">Python
+                <br>
+                <input type="checkbox" name="skill" value="React">React
+                <br>
+                <input type="checkbox" name="skill" value="Angular">Angular
+                <br>
+                <input type="checkbox" name="skill" value="Spring">Spring
+
+                <br>
+
+                <label>Any comments or suggestions</label>
+                <br>
+                <textarea cols="70" rows="4"></textarea>
+                <br>
+
+                <div class="container">
+                    <button class="signup-button">Sign-Up</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+
+</body>
+
+</html>
