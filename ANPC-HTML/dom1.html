@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="createbutton()">
+    <!--
+     <label for="fname">Enter first name</label>   
+     <input type="text" id="fname" placeholder="Enter first name"/>   
+    <button onclick="check()">Check</button>
+    -->
+    <div id="myid">
+
+    </div>
+
+    <script type="text/javascript">
+        var butobj;
+
+        function createbutton() {
+            var lblfnameobj = document.createElement("label");
+            lblfnameobj.innerHTML = "Enter first name";
+            document.getElementById("myid").appendChild(lblfnameobj);
+
+            var fnameobj = document.createElement("input");
+            fnameobj.type = "text";
+            fnameobj.id = "fname";
+            fnameobj.placeholder = "Enter first name";
+            fnameobj.style.backgroundColor = "red";
+            document.getElementById("myid").appendChild(fnameobj);
+
+            var brobj = document.createElement("br");
+            document.getElementById("myid").appendChild(brobj);
+
+            butobj = document.createElement("button");
+            butobj.innerHTML = "Check";
+            document.getElementById("myid").appendChild(butobj);
+            butobj.addEventListener("click", function() {
+                check(fnameobj.value);
+            });
+        }
+
+        function check(name) {
+            alert("Welcome " + name);
+            document.getElementById("myid").removeChild(butobj);
+        }
+    </script>
+
+</body>
+
+</html>
