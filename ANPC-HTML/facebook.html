@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            margin-right: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        /* Button styles */
+        
+        .submit-btn {
+            padding: 5px 50px;
+            border: none;
+            border-radius: 4px;
+            background-color: #00a400;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            margin-left: 30%;
+        }
+        
+        .submit-btn:hover {
+            background: #79bc64;
+        }
+        /* Additional styling for radio buttons */
+        
+        .custom-control-input:checked~.custom-control-label::before {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        
+        .custom-control-input:focus~.custom-control-label::before {
+            box-shadow: 0 0 0 1px #fff, 0 0 0 3px #45a049;
+        }
+        
+        .title {
+            color: #316FF6;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .top {
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        p {
+            font-size: 11px;
+        }
+        
+        .container {
+            width: 33%;
+        }
+        
+        .form-row {
+            display: flex;
+            padding: 5px;
+            margin-right: 10px;
+        }
+        
+        .gender-wrapper {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        label {
+            margin-right: 15px;
+        }
+        
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <h1>
+            <b>Facebook</b>
+        </h1>
+    </div>
+    <div class="container">
+        <form action="/submit" method="post">
+            <div class="row-md-2">
+                <div class="top">
+                    <h4>
+                        <b>Create a new account</b>
+                    </h4>
+                    <span>It's quick and easy</span>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="First name" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Surname" required>
+                </div>
+                <div class="row-md-2">
+                    <input type="text" class="form-control" placeholder="Mobile number or email address" required>
+                </div>
+                <div class="row-md-2">
+                    <input type="text" class="form-control" name="" placeholder="New Password" required minlength="6" max="20">
+                </div>
+                <div class="row-md-2">
+                    <span>Date Of Birth</span>
+                </div>
+                <div class="form-row">
+                    <div class="form-grp col-md-3">
+                        <select name="day" id="day" class="form-control">
+                            <option value disabled selected>Day</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">18</option>
+
+                        </select>
+                    </div>
+                    <div class="form-grp col-md-4">
+                        <select name="month" id="month" class="form-control">
+                        <option value disabled selected>Month</option>
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="Jun">Jun</option>
+                        <option value="July">July</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                       </select>
+                    </div>
+
+                    <div class="form-grp col-md-5">
+                        <select name="year" id="year" class="form-control">
+                            <option value disabled selected>Year</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+            <div class=" row-md-2">
+                <span>Gender</span>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <div class="gender-wrapper">
+                            <label for="male">
+                                <input type="radio" name="gender" value="Male">Male
+                            </label>
+                            <label for="female">
+                                <input type="radio" name="gender" value="Female">Female
+                            </label>
+                            <label for="other">
+                                <input type="radio" name="gender" value="Other">Other
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class=" row-md-2">
+                    <p>People who use our service may have uploaded your contact information to Facebook.
+                        <a href="https://www.facebook.com/help/637205020878504">Learn more.</a>
+                    </p>
+                </div>
+                <div class=" row-md-2">
+                    <p>By clicking Sign Up, you agree to our
+                        <a href="https://www.facebook.com/legal/terms/update">Terms</a>,
+                        <a href="https://www.facebook.com/privacy/policy/?entry_point=data_policy_redirect&amp;entry=0">Privacy
+                        Policy</a> and <a href="https://www.facebook.com/privacy/policies/cookies/?entry_point=cookie_policy_redirect&amp;entry=0">Cookies
+                        Policy.</a> You may receive SMS notifications from us and can opt out at any time.
+                    </p>
+                </div>
+                <button type="submit" class="submit-btn"><b>Sign Up</b></button>
+        </form>
+        </div>
+
+</body>
+
+</html>
